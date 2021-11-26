@@ -2,17 +2,51 @@ html, body {
     padding: 0;
     margin: 0;
     width: 100%;
+    height: 100%;
 }
 
-body {
+.main {
+    height: inherit;
     background-image: url("https://img.zcool.cn/community/01c3ad5e4f3189a801216518bf4318.png@1280w_1l_2o_100sh.png");
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .title-one {
     color: white;
     text-align: center;
-    font-size: 16px;
-    margin-top: 30%;
+    font-size: 24px;
+    letter-spacing: 10px;
+    padding-top: 30%;
     box-sizing: border-box;
+}
+
+.sex-select{
+    margin-top: 20%;
+    text-align: center;
+}
+.sex {
+    font-size: 40px;
+    display: inline-block;
+    width: 30%;
+}
+
+.layui-icon {
+    font-size: 38px;
+}
+
+
+.sex-venus{
+    color: deeppink;
+}
+
+.sex-mars{
+    color: #1E9FFF;
+}
+
+.sex-text {
+    margin-top: 10px;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 4px;
 }
