@@ -1,0 +1,18 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    background-image: url("https://img.zcool.cn/community/01c3ad5e4f3189a801216518bf4318.png@1280w_1l_2o_100sh.png");
+    background-position: center;
+}
+
+.title-one {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30%;
+    box-sizing: border-box;
+}

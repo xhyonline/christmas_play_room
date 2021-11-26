@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/xhyonline/christmas_play_room/services"
 	"net/http"
 
 	"github.com/xhyonline/christmas_play_room/configs"
@@ -10,9 +11,6 @@ import (
 
 	"github.com/xhyonline/xutil/sig"
 
-
-	"github.com/xhyonline/christmas_play_room/component"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -21,9 +19,11 @@ func main() {
 	// 初始化配置
 	configs.Init(configs.WithMySQL())
 	// 初始化 mysql 、redis 等服务组件
-	component.Init(component.RegisterMySQL())
+	//component.Init(component.RegisterMySQL())
 	// 中间件
-	g.Use(middleware.Cors())
+	g.Use(middleware.Cors(), middleware.Static())
+	// 静态文件全部打包
+	g.StaticFS("/static", http.FS(services.StaticFS))
 	// 初始化路由
 	router.InitRouter(g)
 	// 启动 HTTP 服务
